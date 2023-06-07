@@ -1,0 +1,24 @@
+<mat-card class="hourly-weather-container">
+  <ng-container
+    *ngFor="let hourlyWeather of hourlyWeather | slice:1 :13; let indexOfElement=index;">
+    <div class="hour-weather">
+      <mat-card-content>
+        {{timeFormatter.getTime(hourlyWeather?.dt, 0)}}
+      </mat-card-content>
+
+      <img mat-card-avatar
+           alt="weather icon"
+           src="https://openweathermap.org/img/wn/{{hourlyWeather.weather.at(0)?.icon}}@2x.png">
+
+      <mat-card-content>
+        <h2>{{hourlyWeather?.temp | number: '1.0-0'}}°</h2>
+      </mat-card-content>
+      <mat-card-content>
+        {{hourlyWeather?.weather?.at(0)?.description}}
+      </mat-card-content>
+    </div>
+    <ng-container *ngIf="indexOfElement !== 11">
+      <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+    </ng-container>
+  </ng-container>
+</mat-card>

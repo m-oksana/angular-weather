@@ -1,0 +1,6 @@
+<h2 class="sidenav-title">{{'favouriteCities' | translate}}</h2>
+<div class="content-container">
+  <ng-container *ngFor="let city of favouriteCities">
+    <a mat-button class="city-button" routerLink="/cityWeather/{{city.name}}">{{city.localizedName}}</a>
+  </ng-container>
+</div>

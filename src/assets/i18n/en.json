@@ -1,0 +1,17 @@
+{
+  "currentCity": "Current city: ",
+  "favouriteCities": "Favourite cities",
+  "title": "Weather | Oksano4ka Business",
+  "day":"Day",
+  "night": "Night",
+  "feelsLike": "Feels like",
+  "uvi": "UVI",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "humidity": "Humidity",
+  "pressure": "Pressure",
+  "pressureMetric": "hPa",
+  "visibility": "Visibility",
+  "visibilityMetric": "m",
+  "searchCity":"Search city"
+}

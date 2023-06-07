@@ -1,0 +1,17 @@
+{
+  "currentCity": "Текущий город: ",
+  "favouriteCities": "Любимые города",
+  "title": "Погода | Оксано4ка Бизнес",
+  "day": "День",
+  "night": "Ночь",
+  "feelsLike": "Ощущается как",
+  "uvi": "УФ-индекс",
+  "sunrise": "Рассвет",
+  "sunset": "Закат",
+  "humidity": "Влажность",
+  "pressure": "Давление",
+  "pressureMetric": "гПа",
+  "visibility": "Видимость",
+  "visibilityMetric": "м",
+  "searchCity": "Найти город"
+}

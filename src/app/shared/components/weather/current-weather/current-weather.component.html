@@ -1,0 +1,56 @@
+<mat-card class="card-container">
+  <img mat-card-avatar
+       alt="weather icon"
+       src="https://openweathermap.org/img/wn/{{weather.current?.weather?.at(0)?.icon}}@2x.png">
+  <mat-card-content>
+    <h2>{{weather.current?.temp | number: '1.0-0'}}°</h2>
+    {{weather.current?.weather?.at(0)?.description}}
+  </mat-card-content>
+
+  <mat-card-content>
+    <b>{{'day' | translate}}</b> {{weather.daily?.at(0)?.temp?.day | number: '1.0-0'}}° |
+    <b>{{'night' | translate}}</b> {{weather.daily?.at(0)?.temp?.night | number: '1.0-0'}}°
+    <br>
+    <b>{{'feelsLike' | translate}}</b> {{weather.current?.feels_like | number: '1.0-0'}}°
+  </mat-card-content>
+
+  <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+
+  <img mat-card-avatar
+       alt="weather icon"
+       src="assets/icons/uv-index.png">
+  <mat-card-content>
+    <b>{{'uvi' | translate}}</b> {{weather.current?.uvi}}
+  </mat-card-content>
+
+  <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+
+  <img mat-card-avatar
+       alt="weather icon"
+       src="assets/icons/sunrise.png">
+  <mat-card-content>
+    <b>{{'sunrise' | translate}}</b> {{timeFormatter.getTime(weather.current?.sunrise, weather.timezone_offset)}}
+    <br>
+    <b>{{'sunset' | translate}}</b> {{timeFormatter.getTime(weather.current?.sunset, weather.timezone_offset)}}
+  </mat-card-content>
+
+  <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+
+  <img mat-card-avatar
+       alt="weather icon"
+       src="assets/icons/humidity.png">
+  <mat-card-content>
+    <b>{{'humidity' | translate}}</b> {{weather.current?.humidity}}%
+    <br>
+    <b>{{'pressure' | translate}}</b> {{weather.current?.pressure}} {{'pressureMetric' | translate}}
+  </mat-card-content>
+
+  <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+
+  <img mat-card-avatar
+       alt="weather icon"
+       src="assets/icons/visibility.png">
+  <mat-card-content>
+    <b>{{'visibility' | translate}}</b> {{weather.current?.visibility}} {{'visibilityMetric' | translate}}
+  </mat-card-content>
+</mat-card>

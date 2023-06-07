@@ -1,0 +1,23 @@
+.card-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: unset;
+  background-color: lightsteelblue;
+  overflow-x: auto;
+}
+
+.mat-divider-vertical {
+  align-self: stretch;
+  margin: 0 10px;
+}
+
+img {
+  margin: 0;
+}
+
+.mat-mdc-card .mat-mdc-card-content {
+  padding-bottom: 0;
+}

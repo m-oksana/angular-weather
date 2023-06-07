@@ -1,0 +1,5 @@
+<app-search (onLatLogUpdated)="updateCoordinates($event)"></app-search>
+<app-weather
+  [lat]=this.lat$.getValue()
+  [lon]=this.lon$.getValue()
+></app-weather>

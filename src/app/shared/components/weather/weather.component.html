@@ -1,0 +1,11 @@
+<div *ngIf="this.loaderService.loading | async; else content" class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #content>
+  <app-current-weather [weather]="weather"></app-current-weather>
+  <br>
+  <app-hourly-weather [hourlyWeather]="weather.hourly||[]"></app-hourly-weather>
+  <br>
+  <app-daily-weather [dailyWeather]="weather.daily||[]"></app-daily-weather>
+</ng-template>

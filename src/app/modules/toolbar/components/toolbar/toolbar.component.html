@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button aria-label="Menu" (click)="onClickIcon()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="toolbar-title">
+    <a mat-button routerLink="">{{'title' | translate}}</a>
+  </div>
+  <div class="toolbar-lang">
+    <button mat-button (click)="changeLang('en')">EN</button>
+    |
+    <button mat-button (click)="changeLang('ru')">РУС</button>
+  </div>
+</mat-toolbar>

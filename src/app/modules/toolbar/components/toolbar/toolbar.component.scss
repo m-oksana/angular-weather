@@ -1,0 +1,15 @@
+.toolbar-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+mat-toolbar {
+  z-index: 15;
+  top: 0;
+  position: sticky;
+}
+
+.toolbar-lang {
+  justify-content: flex-end;
+}

@@ -1,0 +1,24 @@
+<mat-card class="daily-weather-container">
+  <ng-container
+    *ngFor="let dailyWeather of dailyWeather | slice:1 :8; let indexOfElement=index;">
+    <div class="day-weather">
+      <mat-card-content>
+        {{timeFormatter.getDate(dailyWeather?.dt)}}
+      </mat-card-content>
+
+      <img mat-card-avatar
+           alt="weather icon"
+           src="https://openweathermap.org/img/wn/{{dailyWeather.weather.at(0)?.icon}}@2x.png">
+
+      <mat-card-content>
+        <h2>{{dailyWeather?.temp?.day | number: '1.0-0'}}°</h2>
+      </mat-card-content>
+      <mat-card-content>
+        {{dailyWeather?.weather?.at(0)?.description}}
+      </mat-card-content>
+    </div>
+    <ng-container *ngIf="indexOfElement !== 6">
+      <mat-divider vertical="true" class="mat-divider-vertical"></mat-divider>
+    </ng-container>
+  </ng-container>
+</mat-card>
